@@ -4,34 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            text-align: center;
+            max-width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body style="display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+<body>
 
-    <div style="text-align: center; max-width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-
+    <div>
         <h2>Login</h2>
 
-        <form action="javascript:void(0);" onsubmit="redirectToHome()" style="margin-top: 20px;">
-            <label for="username" style="display: block; margin-bottom: 5px;">Username:</label>
-            <input type="text" id="username" name="username" required style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+        <form action="javascript:void(0);" onsubmit="redirectToHome()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
             <br>
-            <label for="password" style="display: block; margin-bottom: 5px;">Password:</label>
-            <input type="password" id="password" name="password" required style="width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box;">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
             <br>
-            <input type="submit" value="Login" style="background-color: #4CAF50; color: white; cursor: pointer;">
+            <input type="submit" value="Login">
         </form>
 
-        <p style="margin-top: 15px; font-size: 14px;">Don't have an account? <a href="sign_in.html">Sign up</a></p>
+        <p>Don't have an account? <a href="sign_in.html">Sign up</a></p>
     </div>
 
     <script>
         function redirectToHome() {
             // Simulating successful login
-            alert('Login successful! Redirecting to home page.');
+            alert('Login successful! Redirecting to the home page.');
             window.location.href = 'home.html';
-            return false;             // Prevents form submission
+            return false; // Prevents form submission
         }
     </script>
 
 </body>
 </html>
+
